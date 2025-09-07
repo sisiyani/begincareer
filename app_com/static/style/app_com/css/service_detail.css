@@ -46,9 +46,7 @@ body {
     border-color: white;
 }
 
-.navbar-toggler-icon {
-    filter: invert(1);
-}
+
 
 /* 🔝 Sous-barre des services */
 .sub-navbar {
@@ -95,15 +93,15 @@ body {
     background-attachment: fixed; /* Garde l'image fixe */
     overflow: hidden;
 }
-.banner-video{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;       /* recadre mais remplit tout */
-        object-position: 50% 25%; /* centre horizontalement (50%) et décale 25% vers le bas */
-        z-index: 0;
+.banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom center; /* la vidéo reste collée en bas */
+    z-index: 0;
 }
 
 /* Réduction de la bannière au scroll */
@@ -157,3 +155,4 @@ body {
         padding-bottom: 20px;
     }
 }
+

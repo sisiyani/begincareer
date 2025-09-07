@@ -85,33 +85,33 @@ def service_detail(request, service_name):
             "video": "https://begincareer.blob.core.windows.net/begincareer/sociale_media.mp4",
             "sub_services": [
                 {
-                    "name": "{% trans 'Social Media & Community Management' %}",
-                    "description": "{% trans 'Nous prenons en charge la gestion complète de vos réseaux sociaux afin d’optimiser votre visibilité et engagement. Chaque plateforme a ses codes, et nous adaptons les stratégies pour maximiser votre impact digital.' %}",
+                    "name": "Social Media & Community Management",
+                    "description": "Nous prenons en charge la gestion complète de vos réseaux sociaux afin d’optimiser votre visibilité et engagement. Chaque plateforme a ses codes, et nous adaptons les stratégies pour maximiser votre impact digital.",
                     "points": [
-                        "{% trans 'Élaboration et mise en place de stratégies social media.' %}",
-                        "{% trans 'Gestion quotidienne des comptes (publications, stories, interactions).' %}",
-                        "{% trans 'Analyse des performances et optimisation continue.' %}",
-                        "{% trans 'Veille digitale et adaptation aux tendances du marché.' %}",
-                        "{% trans 'Élaboration d’une ligne éditoriale cohérente.' %}",
-                        "{% trans 'Création de contenus engageants adaptés aux tendances digitales.' %}",
+                        "Élaboration et mise en place de stratégies social media.",
+                        "Gestion quotidienne des comptes (publications, stories, interactions).",
+                        "Analyse des performances et optimisation continue.",
+                        "Veille digitale et adaptation aux tendances du marché.",
+                        "Élaboration d’une ligne éditoriale cohérente.",
+                        "Création de contenus engageants adaptés aux tendances digitales.",
                     ],
                 },
                 {
-                    "name": "{% trans 'Direction Artistique",
-                    "description": "{% trans 'Chaque marque a une identité unique, et notre rôle est de la sublimer à travers un univers visuel qui vous correspond. Nous conceptualisons et produisons des contenus, en parfaite adéquation avec l’ADN de la marque.' %}",
+                    "name": "Direction Artistique",
+                    "description": "Chaque marque a une identité unique, et notre rôle est de la sublimer à travers un univers visuel qui vous correspond. Nous conceptualisons et produisons des contenus, en parfaite adéquation avec l’ADN de la marque.",
                     "points": [
-                        "{% trans 'Conception de moodboards et univers graphiques.' %}",
-                        "{% trans 'Production et direction artistique de shootings photo & vidéo.' %}",
-                        "{% trans 'Développement d’une charte visuelle distinctive et impactante.' %}",
+                        "Conception de moodboards et univers graphiques.",
+                        "Production et direction artistique de shootings photo & vidéo.",
+                        "Développement d’une charte visuelle distinctive et impactante.",
                     ],
                 },
                 {
-                    "name": "{% trans 'Création & Production de Contenus' %}",
-                    "description": "{% trans 'Nous orchestrons la production de contenus premium, en accord avec l’image et les ambitions de la marque. Notre approche est à la fois stratégique et esthétique, garantissant une communication cohérente et puissante.' %}",
+                    "name": "Création & Production de Contenus",
+                    "description": "Nous orchestrons la production de contenus premium, en accord avec l’image et les ambitions de la marque. Notre approche est à la fois stratégique et esthétique, garantissant une communication cohérente et puissante.",
                     "points": [
-                        "{% trans 'Design graphique et création visuelle.' %}",
-                        "{% trans 'Production de campagnes digitales et vidéos immersives.' %}",
-                        "{% trans 'Élaboration de calendriers marketing & éditoriaux.' %}",
+                        "Design graphique et création visuelle.",
+                        "Production de campagnes digitales et vidéos immersives.",
+                        "Élaboration de calendriers marketing & éditoriaux.",
                     ],
                 },
             ],
@@ -122,68 +122,50 @@ def service_detail(request, service_name):
             "video": "https://begincareer.blob.core.windows.net/begincareer/styling_and_image.mp4",
             "sub_services": [
                 {
-                    "name": "{% trans 'Stylisme & Sélection de Looks' %}",
-                    "description": "{% trans 'Nous habillons nos clients pour tous types d’événements, en sélectionnant des tenues adaptées à leur image et à l’occasion. Chaque look est pensé avec soin pour refléter leur personnalité et leur style' %}",
+                    "name": "Stylisme & Sélection de Looks",
+                    "description": "Nous habillons nos clients pour tous types d’événements, en sélectionnant des tenues adaptées à leur image et à l’occasion. Chaque look est pensé avec soin pour refléter leur personnalité et leur style",
                     "points": [
-                        "{% trans <strong>'Red carpets, Fashion Weeks, événements privés et professionnels.'</strong> %}",
-                        "{% trans <strong>'Shooting photos, clips, apparitions médiatiques.'</strong> %}",
-                        "{% trans <strong>'Sélection exclusive de pièces issues en collaboration avec nos marques partenaires.'</strong> %}",
+                        "<strong>Red carpets, Fashion Weeks, événements privés et professionnels.</strong>",
+                        "<strong>Shooting photos, clips, apparitions médiatiques.</strong>",
+                        "<strong>Sélection exclusive de pièces issues en collaboration avec nos marques partenaires.</strong>",
                     ],
                 },
                 {
-                    "name": "{% trans 'Expérience sur-mesure & Accès exclusif' %}",
-                    "description": "{% trans 'Nous vous offrons un service <strong>clé en main.</strong>' %}",
+                    "name": "Expérience sur-mesure & Accès exclusif",
+                    "description": "Nous vous offrons un service <strong>clé en main.</strong>",
                     "points": [
-                        "{% trans 'Organisation et coordination des <strong>fittings privés et essayages sur-mesure.</strong>' %}",
-                        "{% trans <strong>'Gestion complète des looks</strong> (tenues, accessoires, ajustements, logistique).' %}",
+                        "Organisation et coordination des <strong>fittings privés et essayages sur-mesure.</strong>",
+                        "<strong>Gestion complète des looks</strong> (tenues, accessoires, ajustements, logistique).",
                     ],
                 },
                 {
-                    "name": "{% trans 'Image & Signature Visuelle' %}",
-                    "description": "{% trans 'Au-delà du stylisme, nous aidons nos clients à construire <strong>une image forte et reconnaissable</strong>, qui s’inscrit dans la durée.' %}",
+                    "name": "Image & Signature Visuelle",
+                    "description": "Au-delà du stylisme, nous aidons nos clients à construire <strong>une image forte et reconnaissable</strong>, qui s’inscrit dans la durée.",
                     "points": [
-                        "{% trans 'Sélection de <strong>photographes, directeurs artistiques et créateurs de contenu</strong> pour mettre en valeur chaque look.' %}",
-                        "{% trans 'Accompagnement pour <strong>créer une cohérence stylistique</strong> à travers leurs apparitions et prises de parole publiques.' %}",
+                        "Sélection de <strong>photographes, directeurs artistiques et créateurs de contenu</strong> pour mettre en valeur chaque look.",
+                        "Accompagnement pour <strong>créer une cohérence stylistique</strong> à travers leurs apparitions et prises de parole publiques.",
 
                     ],
                 },
             ],
         },
         "fashion-week": {
-            "title": "VIP Access & Fashion Week Coordination",
+            "title": "Vip & Celebrities placement",
             "image": "services/fashion_week.png",
             "video": "https://begincareer.blob.core.windows.net/begincareer/vip_access.mp4",
             "sub_services": [
                 {
-                    "name": "{% trans 'Social Media & Community Management' %}",
-                    "description": "{% trans 'Nous prenons en charge la gestion complète de vos réseaux sociaux afin d’optimiser votre visibilité et engagement. Chaque plateforme a ses codes, et nous adaptons les stratégies pour maximiser votre impact digital.' %}",
+                    "name": "Celebrites placement",
+                    "description": "De la sélection des talents à la coordination avec les marques, nous assurons un service clé en main :",
                     "points": [
-                        "{% trans 'Élaboration et mise en place de stratégies social media.' %}",
-                        "{% trans 'Gestion quotidienne des comptes (publications, stories, interactions).' %}",
-                        "{% trans 'Analyse des performances et optimisation continue.' %}",
-                        "{% trans 'Veille digitale et adaptation aux tendances du marché.' %}",
-                        "{% trans 'Élaboration d’une ligne éditoriale cohérente.' %}",
-                        "{% trans 'Création de contenus engageants adaptés aux tendances digitales.' %}",
+                        "<strong>Styling sur mesure</strong>  en collaboration directe avec les maisons et créateurs.",
+                        "<strong>Organisation logistique complète</strong>  : hôtel, transferts privés, mise à disposition de véhicules avec chauffeur.",
+                        "<strong>Couverture média sur place</strong>  : photographe et vidéaste pour capturer chaque instant.",
+                        "Notre expertise permet de créer des apparitions marquantes qui renforcent autant l’image des talents que celle des marques qu’ils représentent.Chaque détail compte : nous garantissons une expérience fluide, élégante et parfaitement alignée avec l’ADN de l’événement.",
+
                     ],
                 },
-                {
-                    "name": "{% trans 'Direction Artistique' %}",
-                    "description": "{% trans 'Chaque marque a une identité unique, et notre rôle est de la sublimer à travers un univers visuel qui vous correspond. Nous conceptualisons et produisons des contenus, en parfaite adéquation avec l’ADN de la marque.",
-                    "points": [
-                        "{% trans 'Conception de moodboards et univers graphiques.",
-                        "{% trans 'Production et direction artistique de shootings photo & vidéo.",
-                        "{% trans 'Développement d’une charte visuelle distinctive et impactante.",
-                    ],
-                },
-                {
-                    "name": "{% trans 'Création & Production de Contenus",
-                    "description": "{% trans 'Nous orchestrons la production de contenus premium, en accord avec l’image et les ambitions de la marque. Notre approche est à la fois stratégique et esthétique, garantissant une communication cohérente et puissante.' %}",
-                    "points": [
-                        "{% trans 'Design graphique et création visuelle.' %}",
-                        "{% trans 'Production de campagnes digitales et vidéos immersives.' %}",
-                        "{% trans 'Élaboration de calendriers marketing & éditoriaux.' %}",
-                    ],
-                },
+
             ],
         },
     }

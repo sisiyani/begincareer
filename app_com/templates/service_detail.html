@@ -84,37 +84,42 @@
 <div class="banner">
     <!-- Vidéo en arrière-plan -->
     <video autoplay muted loop playsinline class="banner-video">
-        <source src={{service.video}} type="video/mp4">
-        Votre navigateur ne supporte pas la vidéo.
+        <source src="{{ service.video }}" type="video/mp4">
+        {% trans "Votre navigateur ne supporte pas la vidéo." %}
     </video>
 
     <!-- Overlay pour assombrir ou colorer la vidéo -->
     <div class="banner-overlay"></div>
 
     <!-- Contenu -->
-    <h1 id="bannerTitle" class="text-white">{{ service.title }}</h1>
+    <h1 id="bannerTitle" class="text-white">{% trans service.title %}</h1>
 </div>
 
 <div class="container-fluid">
     {% if service.sub_services %}
     <div class="row">
         {% for sub in service.sub_services %}
-        <div class="col-lg-4 col-md-3 col-sm-12 text-center">
-            <div class="card-body">
-                <h5 class="card-title text-white">{{ sub.name }}</h5><br>
-                <p class="card-text text-white">{{ sub.description|safe }}</p>
-                <ul>
-                    {% for point in sub.points %}
-                    <li class="card-text text-white">{{ point|safe }}</li>
-                    {% endfor %}
-                </ul>
-
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 bg-dark text-white">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans sub.name %}</h5>
+                    <p class="card-text">{% trans sub.description|safe %}</p>
+                    {% if sub.points %}
+                    <ul>
+                        {% for point in sub.points %}
+                        <li>{% trans point|safe %}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
             </div>
         </div>
         {% endfor %}
     </div>
     {% endif %}
 </div>
+
+
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
