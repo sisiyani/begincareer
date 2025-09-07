@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+
+
+
+/* 🌍 Police & Reset */
+body {
+    font-family: 'Montserrat', sans-serif;;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow-x: hidden;
+
+}
+
+/* 🔝 Navbar */
+.navbar {
+    position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background: rgba(0, 0, 0); /* Fond semi-transparent */
+        padding: 10px 20px;
+}
+
+.navbar .container-fluid {
+    margin-top: 0;
+
+
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 10px;
+}
+.navbar-nav .nav-link:hover {
+    color: grey; /* Couleur au survol */
+}
+
+/* 🔽 Icône du menu mobile */
+.navbar-toggler {
+    border-color: white;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* 🔝 Sous-barre des services */
+.sub-navbar {
+
+   position: sticky;
+      top: 64px; /* Juste sous la navbar */
+      width: 100%;
+      z-index: 999;
+      background: grey;
+      padding: 10px 0;
+      text-align: center;
+}
+
+.sub-navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sub-navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.sub-navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sub-navbar ul li a:hover {
+    text-decoration: underline;
+}
+.banner {
+    position: relative;
+    height: 75vh; /* 3/4 de la page */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Garde l'image fixe */
+    overflow: hidden;
+}
+.banner-video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;       /* recadre mais remplit tout */
+        object-position: 50% 25%; /* centre horizontalement (50%) et décale 25% vers le bas */
+        z-index: 0;
+}
+
+/* Réduction de la bannière au scroll */
+.banner-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Titre de la bannière animé */
+.banner h1 {
+    position: absolute;
+    bottom: 20px;
+    font-size: 3rem;
+    transition: transform 0.5s ease-in-out, font-size 0.5s ease-in-out;
+}
+
+
+.shrink h1 {
+    transform: translateY(-100px); /* Monte le titre */
+    font-size: 1.5rem; /* Devient plus petit */
+}
+
+.container-fluid {
+    margin-top: 30px;
+    position: relative;
+    z-index: 10; /* Passe au-dessus de l'image */
+}
+
+/* Taille du titre des sous-services */
+.card-title {
+    font-size: 1.2rem; /* Réduit la taille du titre */
+    font-weight: 600;
+}
+
+/* Taille du texte de description */
+.card-text {
+    font-size: 0.85rem; /* Réduit la taille du texte */
+    line-height: 1.4; /* Améliore la lisibilité */
+}
+
+/* Taille des points de liste */
+.card-text li {
+    font-size: 0.80rem; /* Encore plus petit pour la liste */
+}
+
+@media (max-width: 767px) {
+    .col-12 {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}

@@ -1,0 +1,175 @@
+/* 🌍 Importation de la police */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+/* Importation de la police Montserrat */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Garde la hauteur fixe */
+    overflow: hidden;
+}
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: black; /* Fond noir pour éviter les zones blanches */
+    color: white;
+}
+
+
+/* 🔝 bar */
+.navbar {
+    background: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+    padding: 10px 20px;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 10px;
+}
+.navbar-nav .nav-link:hover {
+    color: grey; /* Couleur au survol */
+}
+/* Contenu principal */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh; /* Assure que rien ne dépasse */
+    overflow: hidden;
+}
+.video-container {
+    width: 40%;
+    max-height: 100vh; /* Ajuste pour éviter le scroll */
+    background-color: black; /* Fond noir si la vidéo ne prend pas toute la largeur */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-weight: bold;  /* Texte en gras */
+    font-size: 30px;    /* Taille du texte (modifiable selon besoin) */
+    color: white;
+
+}
+
+
+
+.text-container {
+    width: 60%;
+    height: 100vh; /* Même hauteur que la vidéo */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre horizontalement */
+    justify-content: center; /* Centre verticalement */
+    text-align: center; /* Centre le texte */
+    background-color: black;
+    color: white;
+    padding: 20px;
+
+
+}
+
+form {
+    width: 100%;
+    max-width: 600px; /* ✅ Limite la largeur pour une bonne lisibilité */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* ✅ Espacement entre les éléments du formulaire */
+}
+
+/* ✅ Espacement entre les rangées d'inputs */
+.row {
+    margin-bottom: 15px;
+}
+
+/* ✅ Style des inputs */
+.form-control {
+    background-color: black; /* ✅ Fond noir */
+    color: white; /* ✅ Texte blanc */
+    border: 1px solid white; /* ✅ Bordure blanche */
+    padding: 10px; /* ✅ Ajoute de l’espace intérieur */
+}
+
+/* ✅ Placeholder en blanc */
+.form-control::placeholder {
+    color: white;
+    opacity: 0.7; /* ✅ Légèrement transparent */
+}
+
+/* ✅ Style du bouton */
+.btn-dark {
+    background-color: white; /* ✅ Fond blanc */
+    color: black; /* ✅ Texte noir */
+    font-weight: bold;
+    padding: 12px;
+    border: 1px solid white;
+    transition: 0.3s;
+}
+
+.btn-dark:hover {
+    background-color: gray; /* ✅ Effet hover */
+    color: white;
+}
+
+img {
+    width: 20vw; /* Ajuste en fonction de la largeur de l’écran */
+
+    height: auto;
+}
+
+/* Version mobile : texte en dessous de la vidéo */
+@media (max-width: 992px) {
+     html, body {
+            overflow: auto; /* Active le scroll uniquement sur mobile */
+            height: auto; /* Permet à la page de s’étendre si besoin */
+        }
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .video-container, .text-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .video-container video {
+        height: auto;
+    }
+}
+
+.media-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* ✅ Espace entre les liens */
+    margin-top: 20px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    color: white; /* ✅ Texte en blanc */
+    font-size: 18px; /* ✅ Ajuste la taille du texte */
+    font-weight: bold;
+    text-decoration: none; /* ✅ Supprime le soulignement */
+}
+
+.logo-img {
+    width: 30px; /* ✅ Réduit la taille du logo */
+    height: auto;
+    margin-right: 10px; /* ✅ Espace entre le logo et le texte */
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover .logo-img {
+    transform: scale(1.1); /* ✅ Effet zoom au survol */
+}
+

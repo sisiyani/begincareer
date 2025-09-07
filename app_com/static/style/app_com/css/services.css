@@ -1,0 +1,165 @@
+/* 🌍 Importation de la police */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+/* 🌟 Reset & Base */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* 🔝 Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+    color: grey;
+}
+
+/* ================= SERVICES ================= */
+.services-container {
+    display: flex;
+    width: 100%;
+    height: 90vh; /* desktop */
+    background: black;
+}
+
+/* Chaque service */
+.service {
+    width: 33.33%;
+    height: 90vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Vidéo masquée par défaut */
+.service video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 30%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+}
+
+/* Texte au-dessus */
+.service h2 {
+    position: relative;
+    z-index: 2;
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Bouton */
+.button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+}
+
+/* Hover effects desktop */
+.service:hover {
+    width: 50%;
+}
+
+.service:hover video {
+    visibility: visible;
+    opacity: 1;
+}
+
+.service:hover h2 {
+    color: white;
+}
+
+.service:hover .button {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+    .services-container {
+        height: auto; /* s'adapte au contenu */
+    }
+
+    .service {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Colonne verticale */
+
+    /* Neutralise l'effet hover largeur sur mobile */
+
+
+    .service h2 {
+        font-size: 20px;
+    }
+    .services-container {
+        flex-direction: column;  /* vertical */
+        height: 90vh;           /* prend toute la hauteur de l'écran */
+    }
+
+        /* Chaque service prend une part égale de la hauteur */
+    .service {
+        width: 100%;
+        height: auto;    /* supprimé 90vh fixe */
+        flex: 1;         /* chaque service remplit une partie égale de .services-container */
+        margin-bottom: 0; /* plus d'espace inutile */
+    }
+
+    /* Neutralise l'effet hover largeur */
+    .service:hover {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .service h2 {
+        font-size: 18px;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

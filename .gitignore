@@ -1,0 +1,7 @@
+*.pyc
+__pycache__/
+db.sqlite3
+/staticfiles/
+.env
+.mp4
+site_com/settings.py
