@@ -31,6 +31,9 @@ jobs:
       
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Install gettext
+        run: sudo apt-get update && sudo apt-get install -y gettext
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
@@ -58,4 +61,5 @@ jobs:
         with:
           app-name: 'begincareerweb'
           slot-name: 'Production'
+
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_490F8745E8E2457A8BF2AE16B260EF38 }}
