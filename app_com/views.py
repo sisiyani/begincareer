@@ -8,7 +8,7 @@ from django.http import JsonResponse
 from django.utils.timezone import datetime
 from django.core.mail import send_mail
 from django.conf import settings
-
+from .email_utils import send_acs_email
 
 # Liste des créneaux horaires disponibles par défaut
 DEFAULT_SLOTS = ["09:00", "10:00", "11:00", "14:00", "15:00", "16:00", "17:00"]
@@ -31,43 +31,36 @@ def contact(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-
             name = form.cleaned_data['name']
             phone = form.cleaned_data['phone']
             email = form.cleaned_data['email']
             budget = form.cleaned_data['budget']
             message_text = form.cleaned_data['message']
 
-            # Affichage des données dans la console (logs serveur)
-            print(f"Nom: {name}")
-            print(f"Téléphone: {phone}")
-            print(f"Email: {email}")
-            print(f"Budget: {budget}")
-            print(f"Message: {message_text}")
-            # Envoi de l'e-mail
-            subject = "[BEGIN SITE WEB] Nouveau message "
+            print(f"Nom: {name}, Téléphone: {phone}, Email: {email}, Budget: {budget}, Message: {message_text}")
+
+            subject = "[BEGIN SITE WEB] Nouveau message"
             body = f"""
             Vous avez reçu un nouveau message via le formulaire de contact :
-
+            
             Nom: {name}
             Téléphone: {phone}
             Email: {email}
             Budget: {budget}
             Message:
             {message_text}
-            """
-            recipient_list = ["agence@begin-career.com"]  # Mets ici l'adresse qui doit recevoir l'email
+                        """
 
-            try:
-                send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, recipient_list)
+            recipient = "agence@begin-career.com"  # Adresse destinataire
+
+            email_id = send_acs_email(recipient, subject, body)
+            if email_id:
                 message = "✅ Votre message a été envoyé avec succès !"
-                form.save()
-            except Exception as e:
-                print(f"Erreur d'envoi d'email: {e}")
+                #form.save()
+            else:
                 message = "❌ Une erreur est survenue lors de l'envoi de l'e-mail."
 
         else:
-            # Gestion des erreurs
             errors = " ".join([f"{field}: {error}" for field, errors in form.errors.items() for error in errors])
             message = f"❌ Une erreur est survenue. Vérifiez vos informations. {errors}"
 
@@ -75,7 +68,6 @@ def contact(request):
         form = ContactForm()
 
     return render(request, 'contact.html', {'form': form, 'message': message})
-
 def service_detail(request, service_name):
     # Dictionnaire des services avec leurs images et descriptions
     services = {
