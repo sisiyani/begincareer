@@ -17,7 +17,8 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG =  False
 # Mettre les domaines autorisés ici
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "*").split(",")
-
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SESSION_COOKIE_SECURE = True
 # ------------------------------
 # APPS
 # ------------------------------
