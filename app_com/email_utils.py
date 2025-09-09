@@ -3,10 +3,12 @@ from azure.communication.email import EmailClient
 from azure.core.exceptions import HttpResponseError
 
 # Initialise le client ACS Email
-email_client = EmailClient.from_connection_string(settings.ACS_EMAIL_CONNECTION_STRING)
 sender = settings.ACS_EMAIL_SENDER
-
+def get_email_client():
+    return EmailClient.from_connection_string(settings.ACS_EMAIL_CONNECTION_STRING)
+    
 def send_acs_email(to_address, subject, plain_text, html_content=None):
+    email_client = get_email_client()
     """Envoi d'email via Azure Communication Services"""
     message = {
         "senderAddress": sender,
