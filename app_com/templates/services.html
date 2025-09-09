@@ -99,9 +99,9 @@
   <div class="service" id="service3" onmouseover="restartVideo('service3')">
     <h2>VIP ACCESS AND FASHION WEEK COORDINATION</h2>
     <video loop muted>
-      <source src="{% static 'vip_access.mp4' %}" type="video/mp4">
+      <source src="https://begincareer.blob.core.windows.net/begincareer/vip_access.mp4" type="video/mp4">
     </video>
-    <a href="https://begincareer.blob.core.windows.net/begincareer/vip_access.mp4" class="button" onclick="showVideo('service3', 'Accédez aux événements exclusifs')">En savoir plus</a>
+    <a href="{% url 'service_detail' 'fashion-week' %}" class="button" onclick="showVideo('service3', 'Accédez aux événements exclusifs')">En savoir plus</a>
   </div>
 </div>
 
