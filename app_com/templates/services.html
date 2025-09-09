@@ -83,7 +83,7 @@
 <div class="container-fluid services-container">
   <div class="service" id="service1" onmouseover="restartVideo('service1')">
     <h2> SOCIAL MEDIA STRATEGY & DESIGN</h2>
-    <video loop muted>
+    <video loop muted playsinline>
 
       <source src="https://begincareer.blob.core.windows.net/begincareer/sociale_media.mp4" type="video/mp4">
     </video>
@@ -91,15 +91,15 @@
   </div>
   <div class="service" id="service2" onmouseover="restartVideo('service2')">
     <h2>STYLING AND IMAGE</h2>
-    <video loop muted>
+    <video loop muted playsinline>
       <source src="https://begincareer.blob.core.windows.net/begincareer/styling_and_image.mp4" type="video/mp4">
     </video>
     <a href="{% url 'service_detail' 'styling' %}" class="button" onclick="showVideo('service2', 'Nos conseils pour un style unique')">En savoir plus</a>
   </div>
   <div class="service" id="service3" onmouseover="restartVideo('service3')">
     <h2>VIP ACCESS AND FASHION WEEK COORDINATION</h2>
-    <video loop muted>
-      <source src="https://begincareer.blob.core.windows.net/begincareer/vip_access.mp4" type="video/mp4">
+    <video loop muted playsinline>
+      <source src="https://begincareer.blob.core.windows.net/begincareer/vip.mp4" type="video/mp4">
     </video>
     <a href="{% url 'service_detail' 'fashion-week' %}" class="button" onclick="showVideo('service3', 'Accédez aux événements exclusifs')">En savoir plus</a>
   </div>
