@@ -5,6 +5,8 @@ from azure.core.exceptions import HttpResponseError
 # Initialise le client ACS Email
 sender = settings.ACS_EMAIL_SENDER
 def get_email_client():
+    if not hasattr(settings, "ACS_EMAIL_CONNECTION_STRING"):
+        raise ValueError("ACS_EMAIL_CONNECTION_STRING is not defined in settings")
     return EmailClient.from_connection_string(settings.ACS_EMAIL_CONNECTION_STRING)
     
 def send_acs_email(to_address, subject, plain_text, html_content=None):
