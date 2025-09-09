@@ -1,10 +1,8 @@
 {% load static %}
 {% load i18n %}
 <!DOCTYPE html>
-
 <html lang="fr">
 <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +17,7 @@
 <body>
 
 <!-- Vidéo de fond -->
-<video class="background-video" autoplay loop muted>
+<video class="background-video" autoplay loop muted playsinline>
     <source src="https://begincareer.blob.core.windows.net/begincareer/acceuil.mp4" type="video/mp4">
     Votre navigateur ne supporte pas la vidéo.
 </video>
