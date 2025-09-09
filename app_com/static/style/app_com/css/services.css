@@ -64,6 +64,7 @@ html, body {
     visibility: hidden;
     transition: opacity 0.3s ease-in-out;
     z-index: 1;
+    pointer-events: none; /* empêche les clics */
 }
 
 /* Texte au-dessus */
@@ -151,6 +152,20 @@ html, body {
     .service:hover {
         width: 100%;
     }
+     .service video {
+        opacity: 1 !important;
+        visibility: visible !important;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .service:hover video {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 @media (max-width: 480px) {
@@ -161,5 +176,12 @@ html, body {
     .button {
         font-size: 14px;
         padding: 8px 16px;
+    }
+}
+
+@media (min-width: 769px) {
+    .service:hover video {
+        opacity: 1;
+        visibility: visible;
     }
 }
